@@ -1,0 +1,44 @@
+# Project 3 Pt.1 
+
+#Program 1 Finite Loop (Factorial Caluclator)
+
+# Ask the user for a positive integer
+num = int(input("Enter a positive interger to calculate its factorial: "))
+# Initialize the starting factorial total to 1
+factorial = 1
+
+# A finite loop that runs exactly 'num' times
+# range(1, num + 1) generates numbers from 1 up to (and including) num
+for i in range(1, num + 1):
+    factorial = factorial * 1
+
+ # Print the final result after the Loop completes its fixed iterations
+ print(f"The factorial fo {num} is {factorial}")
+
+# Program 2: Indefinite Loop (Shopping List Builder)
+
+# Create an empty list to store items 
+shopping_list = []
+
+print("--- Shopping List Builder ---")
+print("Enter items one by one. Type 'X' when you are finished.")
+
+# Set up an indefinte loop using 'while True'
+while True: 
+    # Get input from the user
+    user_input = input("Add an item (or type 'X' to exit): ")
+
+    #Check if the user entered the specific exit condition (ignoring case)
+    if user_input.strip().upper() == 'X':
+        print ("\nExiting list builder...")
+        break #Manually break out the infinite loop immediately
+
+    #If the they didn't type "X', append the item to oru list and continue looping
+    shopping_list.append(user_input)
+    print(f"-> Added '{user_input}' to your list.")
+
+    # This code executes only after the loop has been terminated by 'break'
+    print("\nHere is your final shopping list:")
+    for item in shopping_list:
+        print(f"- {item}")
+

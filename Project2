@@ -1,0 +1,26 @@
+# Program 1: Check if a number is odd or even
+
+# Get input from the user and convert it to an integer
+number = int(input("Enter a whole number: "))
+
+# A number is even if it can be divided by 2 with a remainder of 0
+if number % 2 == 0:
+    print(f"{number} is an even number.")
+else:
+    print(f"{number} is an odd number.")
+
+#Program 2: Determine ticket price based on age of person
+age = int(input("Enter your age: "))
+
+# Determine price using multiple conditional checks
+if age < 5:
+    price = 0  # Free for toddlers
+elif age <= 12:
+    price = 5  # Discounted child price
+elif age < 65:
+    price = 12  # Standard adult price
+else:
+    price = 7  # Senior citizen discount
+
+# Print the final price
+print(f"Your movie ticket will cost ${price}.")
